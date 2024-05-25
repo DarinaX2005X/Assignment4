@@ -1,5 +1,5 @@
 public class Main {
-    
+
     public static void main(String[] args) {
         WeightedGraph<String> weightedGraph = new WeightedGraph<>(true);
         fillWithWeights(weightedGraph);
@@ -7,7 +7,6 @@ public class Main {
         System.out.println("Dijkstra:");
         Search<String> djk = new DijkstraSearch<>(weightedGraph, "Almaty");
         outputPath(djk, "Kyzylorda");
-
 
         System.out.println("--------------------------------");
 
@@ -26,7 +25,7 @@ public class Main {
     }
 
     public static void fillWithoutWeights(MyGraph<String> graph) {
-        graph.addEdge("Almaty", "Astana"); // 16 - 19
+        graph.addEdge("Almaty", "Astana");
         graph.addEdge("Shymkent", "Atyrau");
         graph.addEdge("Atyrau", "Astana");
         graph.addEdge("Almaty", "Shymkent");
@@ -49,8 +48,6 @@ public class Main {
         for (String v : search.pathTo(key)) {
             System.out.print(v + " -> ");
         }
-
         System.out.println();
     }
 }
-
